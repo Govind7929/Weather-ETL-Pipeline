@@ -1,108 +1,60 @@
-# 🌦️ Weather Data ETL Pipeline
+# Weather Data ETL Pipeline
 
-**Author:** Govind Charde
+Author: Govind Charde
 
-This project is a simple **ETL (Extract, Transform, Load) pipeline** that collects weather data from an API, processes it, and stores it in a **PostgreSQL database** using **Apache Airflow**.
+This project is an ETL (Extract, Transform, Load) pipeline that collects weather data from an API, processes it, and stores it in a PostgreSQL database using Apache Airflow.
 
----
+## Project Overview
 
-## 📌 Project Overview
+The pipeline performs three main steps:
 
-This project works in three steps:
+- Extract: Fetches weather data from an API
+- Transform: Cleans and structures the data
+- Load: Stores the processed data into PostgreSQL
 
-* **Extract:** Get weather data from an API
-* **Transform:** Clean and format the data
-* **Load:** Store the data in a database
+Apache Airflow is used to automate and schedule the workflow.
 
-Airflow is used to automate and schedule this process.
+## Technologies Used
 
----
+- Python
+- Apache Airflow
+- PostgreSQL
+- Docker
 
-## 🚀 Technologies Used
+## Workflow
 
-* Python
-* Apache Airflow
-* PostgreSQL
-* Docker
+- Airflow triggers the pipeline daily
+- Weather data is fetched from the API for multiple cities
+- Data is transformed into a structured format
+- Clean data is stored in the PostgreSQL table
 
----
+## Cities Covered
 
-## 📂 Project Structure
+This pipeline fetches weather data for multiple districts in Maharashtra, including:
 
-```
-ETL_WEATHER/
-│
-├── dags/
-│   └── weather_etl_dag.py
-│
-├── docker-compose.yml
-├── requirements.txt
-└── README.md
-```
+Mumbai, Thane, Palghar, Raigad (Alibaug), Ratnagiri, Sindhudurg, Pune, Satara, Sangli, Kolhapur, Solapur, Nashik, Ahmednagar, Dhule, Jalgaon, Nandurbar, Aurangabad, Jalna, Beed, Osmanabad, Latur, Nanded, Parbhani, Hingoli, Nagpur, Wardha, Bhandara, Gondia, Chandrapur, Gadchiroli, Amravati, Akola, Washim, Buldhana, Yavatmal
 
----
+## Output
 
-## ⚙️ How to Run the Project
+The processed data is stored in the PostgreSQL table:
 
-1. Clone the repository
-
-```
-git clone <your-repo-url>
-cd ETL_WEATHER
-```
-
-2. Start the project
-
-```
-astro dev start
-```
-
-3. Open Airflow UI and run the DAG
-
----
-
-## 🧠 Workflow
-
-* Airflow runs the pipeline
-* Data is fetched from the API
-* Data is cleaned
-* Data is stored in PostgreSQL
-
----
-
-## 📊 Output
-
-The processed data is stored in a table:
-
-```
 weather_data
-```
 
----
+## What I Learned
 
-## 📌 What I Learned
+- Building ETL pipelines using Python
+- Workflow orchestration using Apache Airflow
+- Working with PostgreSQL databases
+- Running containerized applications using Docker
 
-* How ETL pipelines work
-* Using Airflow for automation
-* Working with PostgreSQL
-* Running projects using Docker
+## Future Improvements
 
----
-
-## 🔮 Future Improvements
-
-* Add dashboard for visualization
-* Store more historical data
-* Improve data accuracy
-
----
+- Add data visualization dashboard
+- Store long-term historical data
+- Improve data validation and accuracy
 
 ## About Me
 
-**Govind Charde**
-B.Tech – AI & Data Science
-Data Engineering
-
----
-
-⭐ Thank you for checking out this project!
+Govind Charde  
+B.Tech – Artificial Intelligence & Data Science  
+Aspiring Data Engineer
